@@ -12,9 +12,12 @@ const app =express();
 const port=process.env.PORT || 4000;
 
 connectDB();
-const allowedOrigins =['http://localhost:5173']
+//const allowedOrigins =['http://localhost:5173']
 
-
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://secure-authentication-rdjb-six.vercel.app",
+];
 
 app.use(express.json());
 app.use(cookieParser());
